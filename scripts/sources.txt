@@ -11,3 +11,21 @@ https://raw.githubusercontent.com/ozh/pantone/master/pantone.json
 # Você pode adicionar arquivos locais também, por exemplo:
 # ../meu-datasets/pantone-extra.csv
 https://gist.githubusercontent.com/hdngr/bb548a2b55e8a53f06ec/raw
+https://raw.githubusercontent.com/claudiobernardo/pantone-colours/master/pantone.json
+https://raw.githubusercontent.com/atomiks/pantone/master/pantone.json
+https://raw.githubusercontent.com/LeaVerou/palette/master/pantone.json
+https://raw.githubusercontent.com/idealo/frontend-coding-exercises/master/pantone-colors.json
+https://raw.githubusercontent.com/mbostock/pantone/master/pantone.json
+https://raw.githubusercontent.com/paulirish/pantone-colors/master/pantone.json
+https://raw.githubusercontent.com/azazello/pantone/master/pantone.json
+https://raw.githubusercontent.com/olton/pantone/master/pantone.json
+https://raw.githubusercontent.com/GoogleChromeLabs/pantone/master/pantone.json
+https://raw.githubusercontent.com/dariusk/corpora/master/data/colors/xkcd.json
+https://raw.githubusercontent.com/dariusk/corpora/master/data/colors/crayola.json
+https://raw.githubusercontent.com/dariusk/corpora/master/data/colors/web_colors.json
+https://raw.githubusercontent.com/meodai/color-names/master/src/colornames.json
+https://raw.githubusercontent.com/ozh/colour-names/master/colornames.json
+https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes.json
+https://raw.githubusercontent.com/ozh/palettes/master/palettes.json
+https://raw.githubusercontent.com/atelierbram/snazzy-color/master/snazzy-colors.json
+https://raw.githubusercontent.com/Naoray/mini-pantone/master/pantone.json
