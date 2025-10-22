@@ -1,0 +1,8 @@
+[
+  { "pantone": "PANTONE 186 C", "name": "Vermelho Padrão", "hex": "#C8102E" },
+  { "pantone": "PANTONE 286 C", "name": "Azul Escuro", "hex": "#0033A0" },
+  { "pantone": "PANTONE 300 C", "name": "Azul Vivo", "hex": "#0072CE" },
+  { "pantone": "PANTONE 375 C", "name": "Verde Lima", "hex": "#97D700" },
+  { "pantone": "PANTONE 1375 C", "name": "Laranja", "hex": "#FF6A13" },
+  { "pantone": "PANTONE 021 C", "name": "Laranja Brilhante", "hex": "#FE5000" }
+]
