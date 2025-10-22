@@ -1,36 +1,50 @@
 [
-  { "hex": "000000", "name": "black" },
-  { "hex": "8e9089", "name": "grey" },
-  { "hex": "c7c9c7", "name": "light grey" },
-  { "hex": "ffffff", "name": "white" },
-  { "hex": "cb333b", "name": "red" },
-  { "hex": "e53c2e", "name": "orange red" },
-  { "hex": "ff3eb3", "name": "hot pink" },
-  { "hex": "c5299b", "name": "magenta" },
-  { "hex": "f57eb6", "name": "charity pink" },
-  { "hex": "fabbcb", "name": "pink" },
-  { "hex": "d9c89e", "name": "tan" },
-  { "hex": "f9e547", "pantone": "101" },
-  { "hex": "fce300", "pantone": "102" },
-  { "hex": "c5a900", "pantone": "103" },
-  { "hex": "af9800", "pantone": "104" },
-  { "hex": "897a27", "pantone": "105" },
-  { "hex": "f9e547", "pantone": "106" },
-  { "hex": "fbe122", "pantone": "107" },
-  { "hex": "fedb00", "pantone": "108" },
-  { "hex": "ffd100", "pantone": "109" },
-  { "hex": "aa8a00", "pantone": "111" },
-  { "hex": "9c8412", "pantone": "112" },
-  { "hex": "fae053", "pantone": "113" },
-  { "hex": "fbdd40", "pantone": "114" },
-  { "hex": "fdda24", "pantone": "115" },
-  { "hex": "ffcd00", "pantone": "116" },
-  { "hex": "f7b50c", "pantone": "116 2x" },
-  { "hex": "c8102e", "pantone": "186" },
-  { "hex": "0033a0", "pantone": "286" },
-  { "hex": "0072ce", "pantone": "300" },
-  { "hex": "97d700", "pantone": "375" },
-  { "hex": "ff6a13", "pantone": "1375" },
-  { "hex": "fe5000", "pantone": "orange 021" },
-  { "hex": "ffd700", "pantone": "yellow 012" }
+  {
+    "hex": "#0000FF",
+    "name": "Blue"
+  },
+  {
+    "hex": "#00FF00",
+    "name": "Green"
+  },
+  {
+    "hex": "#00FFFF",
+    "name": "BlueGreen"
+  },
+  {
+    "hex": "#8000FF",
+    "name": "PurpleBlue"
+  },
+  {
+    "hex": "#80FF00",
+    "name": "GreenYellow"
+  },
+  {
+    "hex": "#8C8C8C",
+    "name": "Black"
+  },
+  {
+    "hex": "#FF0000",
+    "name": "Red"
+  },
+  {
+    "hex": "#FF0080",
+    "name": "RedPurple"
+  },
+  {
+    "hex": "#FF00FF",
+    "name": "Purple"
+  },
+  {
+    "hex": "#FF8000",
+    "name": "Orange"
+  },
+  {
+    "hex": "#FFFF00",
+    "name": "Yellow"
+  },
+  {
+    "hex": "#FFFFFF",
+    "name": "White"
+  }
 ]

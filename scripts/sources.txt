@@ -1,0 +1,13 @@
+# Lista de fontes (URLs raw ou caminhos locais) para o script build_pantone.py
+# Formato: uma fonte por linha. Linhas que começam com '#' são comentários.
+# Exemplos de entradas (substitua por URLs reais ou seus arquivos locais):
+# https://raw.githubusercontent.com/your/source/pantone-mapping.json
+# https://gist.githubusercontent.com/someone/abcd1234/raw/pantone.csv
+
+# --- fontes de exemplo (coloque suas próprias URLs ou remova estas) ---
+https://raw.githubusercontent.com/colbyfayock/pantone-colors/master/dist/pantone-colors.json
+https://raw.githubusercontent.com/ozh/pantone/master/pantone.json
+
+# Você pode adicionar arquivos locais também, por exemplo:
+# ../meu-datasets/pantone-extra.csv
+https://gist.githubusercontent.com/hdngr/bb548a2b55e8a53f06ec/raw
