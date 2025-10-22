@@ -1,14 +1,3 @@
-<#
-Simple PowerShell deploy script for uploading the current folder to a GitHub repo and pushing to main.
-Pre-requisitos:
-- git instalado
-- ter permissões para push no repositório remoto (credential helper configurado ou token)
-
-Uso:
-1. Atualize a variável $remoteRepo com seu repositório (ex: https://github.com/username/repo.git)
-2. Execute em PowerShell: .\deploy_to_github.ps1
-#>
-
 $remoteRepo = 'https://github.com/fjmeneguini/hex-for-pantone.git'
 $branch = 'main'
 
@@ -26,7 +15,6 @@ try{
 git remote add origin $remoteRepo
 
 git add .
-# Tentar commit; se não houver mudanças, não falhar
 $null = & git commit -m "Deploy: atualizando site HEX→Pantone" 2>&1
 if ($LASTEXITCODE -ne 0) {
   Write-Host "Nada para cometer ou commit falhou (código $LASTEXITCODE)." -ForegroundColor Yellow
@@ -34,7 +22,6 @@ if ($LASTEXITCODE -ne 0) {
 
 git branch -M $branch
 
-# Push e reportar saída
 Write-Host "Fazendo push para origin/$branch..." -ForegroundColor Cyan
 $pushOutput = & git push -u origin $branch --force 2>&1
 if ($LASTEXITCODE -ne 0) {

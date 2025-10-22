@@ -1,10 +1,7 @@
-// Pequeno app para encontrar Pantone mais próximo de um HEX usando CIEDE2000
 let pantoneLib = [];
 
 async function init(){
-  // carregar sample JSON embutido
   try{
-    // tentar carregar a biblioteca completa primeiro
     let res = await fetch('pantone_full.json');
     if(!res.ok){
       res = await fetch('pantone_sample.json');
@@ -42,10 +39,8 @@ function onFile(e){
 }
 
 function parseCSV(text){
-  // csv parser simples: aceita , or ; as separator and finds header containing hex/pantone/name
   const lines = text.split(/\r?\n/).map(l=>l.trim()).filter(Boolean);
   if(lines.length===0) return [];
-  // detect separator by checking first line
   const sep = lines[0].includes(';') && !lines[0].includes(',') ? ';' : ',';
   const header = lines.shift().split(sep).map(h=>h.trim().toLowerCase());
   const idx = { hex: header.findIndex(h=>/hex|#|color|cor/.test(h)), pantone: header.findIndex(h=>/pantone|pantone name|name/.test(h)), name: header.findIndex(h=>/name|descricao/.test(h)) };
@@ -75,7 +70,6 @@ function onFind(){
   const maxDist = parseFloat(document.getElementById('threshold').value) || 100;
   const method = document.getElementById('method')?.value || 'ciede2000';
 
-  // calcular distancia para cada pantone
   const scored = pantoneLib.map(p=>{
     const phex = (p.hex||p.color||'').replace(/^\s+|\s+$/g,'');
     const valid = /^#?[0-9a-f]{6}$/i.test(phex);
@@ -152,11 +146,9 @@ function hexToRgb(hex){
 }
 
 function rgb2lab({r,g,b}){
-  // sRGB (0..255) -> XYZ -> CIE-Lab
   let [R,G,B] = [r/255,g/255,b/255].map(v=>{
     return v <= 0.04045 ? v/12.92 : Math.pow((v+0.055)/1.055, 2.4);
   });
-  // Observer= 2°, Illuminant= D65
   const X = (R*0.4124564 + G*0.3575761 + B*0.1804375) / 0.95047;
   const Y = (R*0.2126729 + G*0.7151522 + B*0.0721750) / 1.00000;
   const Z = (R*0.0193339 + G*0.1191920 + B*0.9503041) / 1.08883;
@@ -171,9 +163,7 @@ function rgb2lab({r,g,b}){
   return {L,a,b:b2};
 }
 
-// Implementation of CIEDE2000 — returns deltaE
 function deltaE00(lab1, lab2){
-  // from Sharma et al.
   const L1 = lab1.L, a1 = lab1.a, b1 = lab1.b;
   const L2 = lab2.L, a2 = lab2.a, b2 = lab2.b;
   const avgLp = (L1 + L2) / 2.0;
@@ -223,7 +213,6 @@ function deltaE00(lab1, lab2){
   return dE;
 }
 
-// Simples Delta E 1976 (Euclidean in Lab)
 function deltaE76(lab1, lab2){
   const dL = lab1.L - lab2.L;
   const da = lab1.a - lab2.a;
