@@ -4,9 +4,8 @@ Pequeno app web que recebe um código HEX e encontra a cor Pantone mais próxima
 
 Como usar
 
-- Abra `index.html` no seu navegador (duplo clique ou arraste para o navegador).
 - Insira um valor HEX (ex: `#1E90FF`) e clique em "Encontrar Pantone".
-- Você pode também carregar um arquivo JSON ou CSV com sua própria biblioteca Pantone.
+- Você pode carregar um arquivo JSON ou CSV com sua própria biblioteca Pantone.
 
 Novas funcionalidades
 
@@ -41,48 +40,24 @@ Dataset e atribuição
 
 - Um mapeamento Pantone→HEX público foi incorporado como `pantone_full.json` (origem: gist público com mapeamento hexadecimal para códigos Pantone). O arquivo no repositório é um recorte do dataset público para fins de demonstração.
 
-Publicar no GitHub Pages (rápido)
+Deploy
 
-1. Crie um repositório no GitHub e envie todos os arquivos deste projeto.
-2. No GitHub, abra Settings → Pages e selecione a branch `main` e a pasta `/ (root)` como fonte, salve.
-3. Aguarde alguns minutos e abra a URL fornecida pelo GitHub Pages.
-
-Observação: Como o projeto usa apenas arquivos estáticos (HTML/CSS/JS/JSON), ele funciona diretamente no Pages sem build.
-
-Deploy automático (script PowerShell)
-
-Incluí um script `deploy_to_github.ps1` para facilitar o deploy ao seu repositório GitHub.
-
-Pré-requisitos:
-- Git instalado e disponível no PATH
-- Permitir push: configure sua autenticação (credential helper, SSH ou token)
-
-Uso rápido (PowerShell):
-
-1. Abra PowerShell na pasta deste projeto.
-2. (Opcional) Edite `deploy_to_github.ps1` e atualize a variável `$remoteRepo` com seu repositório: `https://github.com/fjmeneguini/hex-for-pantone.git`.
-3. Execute:
+O site já está publicado no GitHub Pages a partir deste repositório. Para enviar atualizações, basta executar o script de deploy incluído:
 
 ```powershell
 .\deploy_to_github.ps1
 ```
 
-O script inicializa o repositório git (se ainda não existir), cria um commit e força push para a branch `main`. Depois, abra as configurações do repositório no GitHub e ative Pages apontando para `main`/`root`.
+O script fará o commit (se houver mudanças) e fará push para a branch `main` do repositório remoto configurado no próprio script.
 
-Se preferir uma alternativa GUI, você pode usar o GitHub Desktop ou fazer os passos manualmente:
+Se preferir, você também pode rodar os comandos git manualmente (equivalente):
 
 ```powershell
-git init
-git remote add origin https://github.com/fjmeneguini/hex-for-pantone.git
 git add .
-git commit -m "Deploy: atualizar site"
-git branch -M main
-git push -u origin main
+git commit -m "Atualização do site"
+git push origin main
 ```
 
-Segurança / Tokens
-
-- Para autenticação ao GitHub via HTTPS, você pode usar o credential helper (cache de credenciais) ou um Personal Access Token (PAT). Para PAT, crie o token no GitHub (Settings → Developer settings → Personal access tokens) e use-o quando solicitado pelo Git ao fazer push.
-- Alternativamente use SSH se preferir não expor tokens.
+Autenticação: use SSH ou um Personal Access Token (PAT) conforme sua preferência.
 
 
